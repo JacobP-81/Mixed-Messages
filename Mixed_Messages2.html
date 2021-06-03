@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mixed messages</title>
+</head>
+<body>
+	<script>
+	/* eslint-disable strict */
+	const mixedMessages = {
+		joke1: [],
+		joke2: [],
+		joke3: [],
+	}
+	// Makes Random Number 
+	const generateRandNum = num => {
+		return Math.floor(Math.random() * num);
+	};
+	// this will make the messages
+	const makeJokes = () => {
+		let phrases = []
+
+		for (let arr in mixedMessages) {
+			let jokes = prompt("Fill in your joke here");
+			mixedMessages[arr].push(jokes);
+			
+			switch (arr) {
+				case 'joke1': phrases.push(`   ${mixedMessages[arr][0]}`)
+					break;
+				case 'joke2': phrases.push(`   ${mixedMessages[arr][0]}`)
+					break;
+				case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
+				break;
+				default: 'error'
+				break;
+			}
+		}
+		return phrases.join('\n')
+	}
+
+
+console.log(makeJokes());
+
+
+
+
+
+
+	
+	</script>
+</body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
