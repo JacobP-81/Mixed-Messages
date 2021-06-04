@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mixed messages</title>
+</head>
+<body>
+	<script>
+	let Jokes = ["What’s the best thing about Switzerland?I don’t know, but the flag is a big plus.","I invented a new word! Plagiarism!","Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.","Why do we tell actors to “break a leg?” Because every play has a cast.","Helvetica and Times New Roman walk into a bar. “Get out of here!” shouts the bartender. “We don’t serve your type.”","Yesterday I saw a guy spill all his Scrabble letters on the road. I asked him, “What’s the word on the street?” Once my dog ate all the Scrabble tiles. For days he kept leaving little messages around the house.","Hear about the new restaurant called Karma? There’s no menu: You get what you deserve.","A woman in labor suddenly shouted, “Shouldn’t! Wouldn’t! Couldn’t! Didn’t! Can’t!”“Don’t worry,” said the doc. “Those are just contractions.”","Did you hear about the actor who fell through the floorboards?He was just going through a stage.","Did you hear about the claustrophobic astronaut?He just needed a little space.","Why don’t scientists trust atoms? Because they make up everything.","Where are average things manufactured? The satisfactory."];
+	
+	var val = prompt("What kind of message do you want to hear? (Choices = 'Jokes', 'Name')" );
+	val = val.toLowerCase();
+	
+	switch(val){
+		
+		case "jokes":
+		console.log(`${Jokes[Math.floor(Math.random() * Jokes.length)]}`);
+		break;
+		
+		case "name":
+		var name = prompt("What is your name?");
+		console.log(`Hello there ${name}!`)
+		break;
+	}
+	
+	</script>
+</body>
+</html>	
+
+
+
+
+
+
+

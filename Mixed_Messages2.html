@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mixed messages</title>
+</head>
+<body>
+	<script>
+	/* eslint-disable strict */
+	const mixedMessages = {
+		joke1: [],
+		joke2: []
+	}
+	//to be filled more later
+	const setMessages = {
+		joke1: ["thanos had to snap twice!"],
+		joke2: ["to get to the other side"]
+	}
+	
+	// Makes Random Number 
+	const generateRandNum = num => {
+		return Math.floor(Math.random() * num);
+	};
+	
+	// this will make the messages
+	const makeJokes = () => {
+		let phrases = []
+		console.log("Welcome to the joke generator!! \n You can make the jokes yourself or let the program do it for you")
+		let choice = prompt("input 'C' for program generated jokes, or 'U' for making your own jokes");
+		choice = choice.toLowerCase();
+		
+		if(choice === 'u'){
+			for (let arr in mixedMessages) {
+				if(arr === "joke1"){
+						
+						let punchline = prompt("Fill in yo mama punch lines here!");
+						mixedMessages.joke1.push(punchline);
+						
+					}
+				else if(arr === "joke2"){
+						
+						let punchline = prompt("Fill in punch lines for the crossing chicken joke!");
+						mixedMessages.joke1.push(punchline);
+						
+					}
+					
+					switch (arr) {
+							case 'joke1': phrases.push(`yo mama is so fat, ${mixedMessages[arr][generateRandNum(mixedMessages[arr].length)]}`)
+								break;
+							case 'joke2': phrases.push(`Why did the chicken cross the road? ${mixedMessages[arr][generateRandNum(mixedMessages[arr].length)]}`)
+								break;
+							//case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
+							//break;
+							default: 'error'
+							break;
+					}//switch
+				
+			}
+			return phrases.join('\n')
+		}//end of user input
+		else if(choice === 'c'){
+			for (let arr in setMessages) {
+				switch (arr) {
+							case 'joke1': phrases.push(`yo mama is so fat, ${setMessages[arr][generateRandNum(setMessages[arr].length)]}`)
+								break;
+							case 'joke2': phrases.push(`Why did the chicken cross the road? ${setMessages[arr][generateRandNum(setMessages[arr].length)]}`)
+								break;
+							//case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
+							//break;
+							default: 'error'
+							break;
+					}//switch
+			}
+			return phrases.join('\n')
+		}
+		else{
+			console.log("Invalid input try again...");
+		}
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*	for (let arr in mixedMessages) {
+			
+			//let punchline = prompt("Fill in your joke here");
+				if(choice === 'u'){
+					if(arr === "joke1"){
+						let num = prompt("how many punch lines do you want? The program will randomly pick one and say the joke after!");
+						
+						for(var i = 0; i < num;i++){
+							let punchline = prompt("Fill in yo mama punch lines here!");
+							mixedMessages.joke1.push(punchline);
+						}
+					}
+					else if(arr === "joke2"){
+						let num = prompt("how many punch lines do you want? The program will randomly pick one and say the joke after!");
+						
+						for(var i = 0; i < num;i++){
+							let punchline = prompt("Fill in punch lines for the crossing chic!");
+							mixedMessages.joke1.push(punchline);
+						}
+					}
+					
+					switch (arr) {
+							case 'joke1': phrases.push(`yo mama is so fat, ${mixedMessages[arr][generateRandNum(mixedMessages[arr].length)]}`)
+								break;
+							case 'joke2': phrases.push(`Why did the chicken cross the road? ${mixedMessages[arr][generateRandNum(mixedMessages[arr].length)]}`)
+								//break;
+							//case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
+							//break;
+							default: 'error'
+							break;
+						}//switch
+				}//user input jokes
+				else if(choice === 'c'){
+					if(arr === "joke1"){
+							mixedMessages.joke1.push(punchline);
+						}
+					}
+					else if(arr === "joke2"){
+							mixedMessages.joke1.push(punchline);
+						}
+					}
+					switch (arr) {
+						case 'joke1': phrases.push(`yo mama is so fat, ${mixedMessages[arr][generateRandNum(mixedMessages[arr].length)]}`)
+							break;
+						case 'joke2': phrases.push(`   ${mixedMessages[arr][0]}`)
+							//break;
+						//case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
+						//break;
+						default: 'error'
+						break;
+					}
+				}//program generated jokes
+			
+		}//for loop
+		return phrases.join('\n')
+	}
+
+*/
+console.log(makeJokes());
+
+
+
+
+
+
+	
+	</script>
+</body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
