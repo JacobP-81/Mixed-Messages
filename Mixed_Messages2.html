@@ -22,16 +22,23 @@
 		let phrases = []
 
 		for (let arr in mixedMessages) {
-			let jokes = prompt("Fill in your joke here");
-			mixedMessages[arr].push(jokes);
 			
+			//let punchline = prompt("Fill in your joke here");
+				if(arr === "joke1"){
+					let num = prompt("how many punch lines do you want? The program will randomly pick one and say the joke after!");
+					
+					for(var i = 0; i < num;i++){
+						let punchline = prompt("Fill in yo mama punch line here!");
+						mixedMessages.joke1.push(punchline);
+					}
+				}
 			switch (arr) {
-				case 'joke1': phrases.push(`   ${mixedMessages[arr][0]}`)
+				case 'joke1': phrases.push(`yo mama is so fat, ${mixedMessages[arr][generateRandNum(mixedMessages[arr].length)]}`)
 					break;
-				case 'joke2': phrases.push(`   ${mixedMessages[arr][0]}`)
-					break;
-				case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
-				break;
+				//case 'joke2': phrases.push(`   ${mixedMessages[arr][0]}`)
+					//break;
+				//case 'joke3': phrases.push(`   ${mixedMessages[arr][0]}`)
+				//break;
 				default: 'error'
 				break;
 			}
